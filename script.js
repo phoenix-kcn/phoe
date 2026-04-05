@@ -32,13 +32,15 @@ navButtons.forEach(btn => {
     });
 });
 
-// Copy to Clipboard Logic
-function copyTemplate(elementId) {
+// Add 'e' or 'event' as a parameter
+function copyTemplate(elementId, event) {
     const codeBlock = document.getElementById(elementId);
     const textToCopy = codeBlock.innerText;
     
+    // Capture the button immediately using the passed event
+    const btn = event.currentTarget || event.target;
+    
     navigator.clipboard.writeText(textToCopy).then(() => {
-        const btn = event.target;
         const originalText = btn.innerText;
         
         btn.innerText = "Copied!";
@@ -51,7 +53,7 @@ function copyTemplate(elementId) {
             btn.style.borderColor = "#bbb";
         }, 1500);
     }).catch(err => {
-        alert("Failed to copy text. Please try manually.");
+        alert("Failed to copy text. Note: Clipboard API requires HTTPS or localhost.");
         console.error("Copy failed: ", err);
     });
 }

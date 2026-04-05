@@ -21,7 +21,9 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="nav-btn active" data-target="home">Home</a></li>
                 <li><a href="#templates" class="nav-btn" data-target="templates">Templates</a></li>
-                <li><a href="#notes" class="nav-btn" data-target="notes">Notes</a></li>
+                <li><a href="#" class="nav-btn" data-target="templates">Practice</a></li>
+                <li><a href="#profiles" class="nav-btn" data-target="profiles">Profiles</a></li>
+                <li><a href="#notes" class="nav-btn" data-target="notes">Take Notes</a></li>
                 <li><a href="#contact" class="nav-btn" data-target="contact">Let's Talk</a></li>
             </ul>
         </nav>
@@ -47,79 +49,74 @@
             <div class="template-card">
                 <div class="template-header">
                     <h3>Basic Boilerplate</h3>
-                    <button class="copy-btn" onclick="copyTemplate('cpp-boilerplate')">Copy Code</button>
+                    <!-- <button class="copy-btn" onclick="copyTemplate('cpp-boilerplate')">Copy Code</button> -->
+                     <button class="copy-btn" onclick="copyTemplate('cpp-boilerplate', event)">Copy Code</button>
                 </div>
-                <pre><code id="cpp-boilerplate">#include &lt;bits/stdc++.h&gt;
+                <pre><code id="cpp-boilerplate">// 
+//link: 
+//author: iam-phoenix
+#include &lt;bits/stdc++.h&gt;
 using namespace std;
 
-#define fastio ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-#define ll long long
+using ll = long long;
+using vi = vector&lt;int&gt;;
+using vvi = vector&lt;vi&gt;;
+using vs = vector&lt;string&gt;;
+using vvs = vector&lt;vs&gt;;
+using vl = vector&lt;ll&gt;;
+using vpl = vector&lt;pair&lt;ll,ll&gt;&gt;;
+
+#define pb push_back
+#define all(x) (x).begin(), (x).end()
+#define allr(a) a.rbegin(), a.rend()
+#define sz(x) (int)(x).size()
+#define fastio ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0)
+#define lll __int128
+#define loop(i,n) for(ll i=0;i&lt;n;i++)
+#define loop2(i,n) for(ll i=1;i&lt;=n;i++)
+#define input(a) for(auto &amp;x:a) cin&gt;&gt;x
+#define output(a) for(auto x:a) cout&lt;&lt;x&lt;&lt;" ";cout&lt;&lt;endl
+#define no cout &lt;&lt; "NO" &lt;&lt; endl
+#define yes cout &lt;&lt; "YES" &lt;&lt; endl
+#define endl '\n'
+#define pi 3.14159265358979323846LL
+#define MOD 676767677
+
 
 void solve() {
-    // Your code here
+    
+    ll n;
+    cin &gt;&gt; n;
+    
+    // Main logic goes here
+    
 }
 
 int main() {
+    
     fastio;
-    int t = 1;
-    cin &gt;&gt; t;
-    while (t--) {
-        solve();
-    }
+
+    //int t;
+    //cin &gt;&gt; t;
+    //while (t--) {
+    //    solve();
+    //}
+    
+    solve();
+
     return 0;
 }</code></pre>
-            </div>
-
-            <div class="template-card">
-                <div class="template-header">
-                    <h3>DSU (Disjoint Set Union)</h3>
-                    <button class="copy-btn" onclick="copyTemplate('cpp-dsu')">Copy Code</button>
-                </div>
-                <pre><code id="cpp-dsu">struct DSU {
-    vector&lt;int&gt; parent, size;
-    DSU(int n) {
-        parent.resize(n); size.assign(n, 1);
-        iota(parent.begin(), parent.end(), 0);
-    }
-    int find(int v) {
-        if (v == parent[v]) return v;
-        return parent[v] = find(parent[v]);
-    }
-    void unite(int a, int b) {
-        a = find(a); b = find(b);
-        if (a != b) {
-            if (size[a] &lt; size[b]) swap(a, b);
-            parent[b] = a;
-            size[a] += size[b];
-        }
-    }
-};</code></pre>
             </div>
         </section>
 
         <section id="notes" class="content-section">
-            <h2>My Notes & Resources</h2>
-            <p>Quick links to my Notion pages and practice sheets.</p>
+            <h2>Take Notes</h2>
+            <p>Quick links to my Notion pages.</p>
             
             <ul class="notes-list">
                 <li>
-                    <a href="#" target="_blank" class="note-link">
-                        <strong>Number Theory Notes</strong> - Sieve, GCD, Modular Arithmetic
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="note-link">
-                        <strong>Graph Algorithms</strong> - BFS/DFS, Dijkstra, MST
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="note-link">
-                        <strong>Dynamic Programming</strong> - Classical problems, state optimizations
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="note-link cf-link">
-                        <strong>My Codeforces Profile</strong>
+                    <a href="https://victorious-flower-8af.notion.site/Take-Notes-339b50d1d8da80ed8ddadcb57246db44?source=copy_link" target="_blank" class="note-link cf-link">
+                        <strong>Take Notes</strong>
                     </a>
                 </li>
             </ul>
@@ -137,6 +134,38 @@ int main() {
                 <p><strong>GitHub:</strong> <a href="#">github.com/yourusername</a></p>
             </div>
         </section> -->
+
+        <section id="profiles" class="content-section">
+            <h2>Coding Profiles</h2>
+            <p class="contact-subtitle">Check out my progress and problem-solving stats across various platforms.</p>
+            
+            <div class="contact-grid">
+                <a href="https://codeforces.com/profile/iam-phoenix" target="_blank" class="contact-card">
+                    <span class="contact-label">Codeforces</span>
+                    <span class="contact-value">iam-phoenix</span>
+                </a>
+                
+                <a href="https://www.codechef.com/users/small_neutro" target="_blank" class="contact-card">
+                    <span class="contact-label">CodeChef</span>
+                    <span class="contact-value">small_neutro</span>
+                </a>
+                
+                <a href="https://leetcode.com/u/shahadathossain-kcn/" target="_blank" class="contact-card">
+                    <span class="contact-label">LeetCode</span>
+                    <span class="contact-value">shahadathossain-kcn</span>
+                </a>
+                
+                <a href="https://github.com/phoenix-kcn" target="_blank" class="contact-card">
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">phoenix-kcn</span>
+                </a>
+
+                <a href="https://vjudge.net/user/iam_phoenix" target="_blank" class="contact-card">
+                    <span class="contact-label">Vjudge</span>
+                    <span class="contact-value">iam_phoenix</span>
+                </a>
+            </div>
+        </section>
 
         <section id="contact" class="content-section">
             <h2>Let's Talk</h2>
@@ -158,9 +187,9 @@ int main() {
                     <span class="contact-value">iam-shahadat</span>
                 </a>
                 
-                <a href="https://github.com/phoenix-kcn" target="_blank" class="contact-card">
-                    <span class="contact-label">GitHub</span>
-                    <span class="contact-value">phoenix-kcn</span>
+                <a href="https://wa.me/qr/A2WVQ7HWOPWGM1" target="_blank" class="contact-card">
+                    <span class="contact-label">WhatsApp</span>
+                    <span class="contact-value">+8801575827865</span>
                 </a>
             </div>
         </section>
